@@ -1,0 +1,20 @@
+{
+  "model": "ALED",
+  "predict_af_depths": true,
+  "transforms": {
+    "pad": {
+      "pad_input": false
+    }
+  },
+  "batch_size_test": 1,
+  "num_workers": 0,
+  "dataset": {
+    "name": "M3ED",
+    "path_test": "/path/to/the/preprocessed/dataset/test/",
+    "test_is_zipped": false,
+    "test_subset_rule": ""
+  },
+  "lidar_max_range": 120.0,
+  "save_visualization": false,
+  "measure_computational_complexity": false
+}

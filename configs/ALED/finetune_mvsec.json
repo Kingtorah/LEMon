@@ -1,0 +1,32 @@
+{
+  "model": "ALED",
+  "predict_af_depths": true,
+  "transforms": {
+    "pad": {
+      "pad_input": true,
+      "padded_image_size_x": 352,
+      "padded_image_size_y": 264
+    },
+    "crop": {
+      "crop_input": true,
+      "crop_size": 256
+    }
+  },
+  "batch_size_train": 4,
+  "num_workers": 8,
+  "accumulation_steps_train": 2,
+  "dataset": {
+    "name": "MVSEC",
+    "path_train": "/path/to/the/preprocessed/dataset/train/",
+    "path_val": "/path/to/the/preprocessed/dataset/val/",
+    "train_is_zipped": true,
+    "val_is_zipped": true,
+    "train_subset_rule": "",
+    "val_subset_rule": "idx == 0"
+  },
+  "epochs": 5,
+  "initial_learning_rate": 0.00001,
+  "final_learning_rate": 0.00001,
+  "weight_msg_epoch_0": 0.1,
+  "losses_display_every_x": 20
+}

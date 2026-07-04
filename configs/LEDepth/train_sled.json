@@ -1,0 +1,33 @@
+{
+  "model": "LEMON_V4",
+  "predict_af_depths": false,
+  "patch_size": 4,
+  "transforms": {
+    "pad": {
+      "pad_input": false
+    },
+    "crop": {
+      "crop_input": true,
+      "crop_size": 512
+    }
+  },
+  "batch_size_train": 2,
+  "num_workers": 12,
+  "accumulation_steps_train": 2,
+  "dataset": {
+    "name": "SLED",
+    "path_train": "/root/autodl-tmp/dataset/SLED/processed/train",
+    "path_val": "/root/autodl-tmp/dataset/SLED/processed/val",
+    "train_is_zipped": true,
+    "val_is_zipped": true,
+    "train_subset_rule": "",
+    "val_subset_rule": "(idx - 60) % 80 == 0"
+  },
+  "epochs": 100,
+  "initial_learning_rate": 0.0001,
+  "final_learning_rate": 0.000001,
+  "weight_msg_epoch_0": 1.0,
+  "losses_display_every_x": 20,
+  "use_student_loss": true,
+  "weight_sspl": 0.2
+}

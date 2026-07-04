@@ -1,0 +1,36 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Training / experiment outputs
+out/
+runs/
+outputs/
+checkpoints/
+wandb/
+*.ckpt
+*.pth
+*.pt
+*.onnx
+
+# Data archives and local datasets
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar

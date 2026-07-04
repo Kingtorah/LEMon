@@ -1,0 +1,23 @@
+{
+  "model": "DELTA",
+  "predict_af_depths": false,
+  "patch_size": 12,
+  "transforms": {
+    "pad": {
+      "pad_input": true,
+      "padded_image_size_x": 1284,
+      "padded_image_size_y": 720
+    }
+  },
+  "batch_size_test": 1,
+  "num_workers": 4,
+  "dataset": {
+    "name": "SLED",
+    "path_test": "/path/to/the/preprocessed/dataset/test/",
+    "test_is_zipped": true,
+    "test_subset_rule": ""
+  },
+  "lidar_max_range": 200.0,
+  "save_visualization": false,
+  "measure_computational_complexity": false
+}

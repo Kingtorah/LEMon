@@ -1,0 +1,23 @@
+{
+  "model": "LEMON_V4",
+  "predict_af_depths": false,
+  "patch_size": 4,
+  "transforms": {
+    "pad": {
+      "pad_input": true,
+      "padded_image_size_x": 348,
+      "padded_image_size_y": 264
+    }
+  },
+  "batch_size_test": 1,
+  "num_workers": 4,
+  "dataset": {
+    "name": "MVSEC",
+    "path_test": "/root/autodl-tmp/dataset/MVSEC/processed/test/day1",
+    "test_is_zipped": true,
+    "test_subset_rule": ""
+  },
+  "lidar_max_range": 100.0,
+  "save_visualization": true,
+  "measure_computational_complexity": false
+}

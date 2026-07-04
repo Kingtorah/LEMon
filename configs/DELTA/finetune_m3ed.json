@@ -1,0 +1,31 @@
+{
+  "model": "DELTA",
+  "predict_af_depths": false,
+  "patch_size": 16,
+  "transforms": {
+    "pad": {
+      "pad_input": false
+    },
+    "crop": {
+      "crop_input": true,
+      "crop_size": 512
+    }
+  },
+  "batch_size_train": 4,
+  "num_workers": 12,
+  "accumulation_steps_train": 2,
+  "dataset": {
+    "name": "M3ED",
+    "path_train": "/path/to/the/preprocessed/dataset/train/",
+    "path_val": "/path/to/the/preprocessed/dataset/val/",
+    "train_is_zipped": false,
+    "val_is_zipped": false,
+    "train_subset_rule": "",
+    "val_subset_rule": "idx == 0"
+  },
+  "epochs": 6,
+  "initial_learning_rate": 0.00001,
+  "final_learning_rate": 0.00001,
+  "weight_msg_epoch_0": 1.0,
+  "losses_display_every_x": 20
+}

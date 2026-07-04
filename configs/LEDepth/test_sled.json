@@ -1,0 +1,22 @@
+{
+  "model": "LEMON_V4",
+  "predict_af_depths": false,
+  "patch_size": 4,
+  "transforms": {
+    "pad": {
+      "pad_input": false
+    }
+  },
+  "batch_size_test": 1,
+  "num_workers": 2,
+  "dataset": {
+    "name": "SLED",
+    "path_test": "/root/autodl-tmp/dataset/SLED/processed/test/Town03",
+    "path_sav": " ",
+    "test_is_zipped": true,
+    "test_subset_rule": ""
+  },
+  "lidar_max_range": 200.0,
+  "save_visualization": false,
+  "measure_computational_complexity": false
+}
